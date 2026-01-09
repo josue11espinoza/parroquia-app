@@ -1,1 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parroquia San Mateo de Huanchor</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1 class="title">Parroquia San Mateo de Huanchor</h1>
+      <p class="subtitle">Sistema de registros parroquiales</p>
+    </div>
+  </header>
 
+  <main class="container">
+    <section id="auth-section" class="card">
+      <h2>Acceso</h2>
+      <div id="user-info" hidden>
+        <p id="welcome"></p>
+        <button id="btn-logout">Cerrar sesión</button>
+      </div>
+
+      <form id="login-form">
+        <input id="email" type="email" placeholder="Correo" required>
+        <input id="password" type="password" placeholder="Contraseña" required>
+        <button type="submit">Ingresar</button>
+      </form>
+    </section>
+
+    <section id="panel" class="card" hidden>
+      <h2>Panel administrativo</h2>
+      <form id="member-form">
+        <input id="dni" placeholder="DNI" required>
+        <input id="nombre" placeholder="Nombre completo" required>
+        <input id="telefono" placeholder="Teléfono">
+        <button type="submit">Registrar miembro</button>
+      </form>
+
+      <div id="search">
+        <input id="search-dni" placeholder="Buscar por DNI">
+        <button id="btn-search">Buscar</button>
+      </div>
+
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Parroquia San Mateo de Huanchor</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
